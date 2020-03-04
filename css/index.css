@@ -11,15 +11,19 @@ body{
 
 .header{
     background-color: black;
-    padding: 4em 3em 4em 3em;
-    color: black;
+    padding: 2em 0em 2em 2em;
+    color: white;
     font-family: 'Spartan' sans-serif;
     font-size: 30px;
+    /* Following prepare for animation setup */
+    margin-left: 100%;
+    width: 300%;
+    overflow: hidden;
 
-    animation: textChange ease 2s;
+    animation: slideLeft ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 3.5s;
 }
 
 /* Styling for welcome pop up on page load */
@@ -32,6 +36,51 @@ body{
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
+.animated{
+    opacity: 0;
+    background-color: red;
+    color: white;
+    animation: fadeInUp ease 2s;
+    animation-delay: 3.5s;
+    animation-iteration-count: 1;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    padding: .5em .5em .5em .5em;
+    margin: -4em .5em .5em .5em;
+    display: inline-block;
+    opacity: 0;
+
+    animation: fadeInUp ease 1s;
+    animation-delay: 3.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black
+}
+
+.content:hover .overlay {
+    opacity: .5;
+}
+
+
 
 @keyframes fadeInAnimation{
     0% {
@@ -52,12 +101,23 @@ body{
     }
 }
 
-@keyframes textChange{
-    0%{
-        color: black;
+@keyframes slideLeft{
+    from{
+        margin-left: 100%;
+        width: 300%;
     }
+    to{
+        margin-left: 0;
+        width: 100%;
+    }
+}
 
+@keyframes fadeInUp {
+    0%{
+        transform: translate3d(0, 40px, 0);
+    }
     100%{
-        color: white;
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
     }
 }
