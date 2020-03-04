@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Spartan' sans-serif;
+
+    animation: colorChange ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.header{
+    background-color: black;
+    padding: 4em 3em 4em 3em;
+    color: black;
+    font-family: 'Spartan' sans-serif;
+    font-size: 30px;
+
+    animation: textChange ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+/* Styling for welcome pop up on page load */
+.welcome{
+    margin: 3em 0em 0em 0em;
+    text-align: center;
+    font-size: 80px;
+    /* Fade in details */
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange{
+    0%{
+        background-color: black;
+    }
+
+    100%{
+        background-color: white;
+    }
+}
+
+@keyframes textChange{
+    0%{
+        color: black;
+    }
+
+    100%{
+        color: white;
+    }
+}
