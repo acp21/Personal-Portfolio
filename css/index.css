@@ -1,7 +1,8 @@
+
 body{
     background-color: black;
     color: white;
-    font-family: 'Spartan' sans-serif;
+    font-family: 'Spartan', sans-serif;
 
     animation: colorChange ease 2s;
     animation-iteration-count: 1;
@@ -9,12 +10,12 @@ body{
     animation-delay: 2s;
 }
 
+
 .header{
     background-color: black;
-    padding: 2em 0em 2em 2em;
+    padding: 1em 0em 1em 2em;
     color: white;
-    font-family: 'Spartan' sans-serif;
-    font-size: 30px;
+    font-size: 50px;
     /* Following prepare for animation setup */
     margin-left: 100%;
     width: 300%;
@@ -49,18 +50,25 @@ body{
 .links{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .content{
-    padding: .5em .5em .5em .5em;
     margin: -4em .5em .5em .5em;
     display: inline-block;
     opacity: 0;
+    box-shadow: 10px 10px 5px grey;
+    width: 100%;
 
     animation: fadeInUp ease 1s;
     animation-delay: 3.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.content img{
+    /* width: 100%;
+    height: 100%; */
 }
 
 .overlay{
@@ -79,7 +87,6 @@ body{
 .content:hover .overlay {
     opacity: .5;
 }
-
 
 
 @keyframes fadeInAnimation{
