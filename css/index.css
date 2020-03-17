@@ -18,7 +18,7 @@ a:visited{
 }
 
 .header{
-    background-color: black;
+    background-color: #505050;
     padding: 1em 0em 1em 2em;
     color: white;
     font-size: 50px;
@@ -95,6 +95,19 @@ a:visited{
     opacity: 0;
     transition: .5s ease;
     background-color: black
+}
+
+.content:hover .overlay {
+    opacity: .5;
+}
+
+.back {
+    background-color: red;
+    width: 100vw;
+}
+
+.secondary {
+    background: green;
 }
 
 /* Following is all for animation */
